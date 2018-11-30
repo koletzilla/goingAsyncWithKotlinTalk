@@ -30,3 +30,7 @@ The rest of packages contains mainly the code used in the slides. In order of ap
 
 - **Requests**: functions that are wrapping the HTTP request in the `common` package using different abstractions.
 - **(--packageName--)[0-9]***: Contains the different examples used in the code.
+
+## About the time measurements.
+
+All the examples are runned individually, so for each one of the executions, some time will be used just to initialize things like the Threads and other things related to the creation of the JVM. This will lead to some executions having an 'overhead' of 100-200 ms. If you want to get more precise results, edit the code and copy-paste the code inside the main functions one under another, like 4-5 times, so each time you execute a main function, the 2nd and next iterations of this code will reuse some things like the Threads created by the 1st code.
